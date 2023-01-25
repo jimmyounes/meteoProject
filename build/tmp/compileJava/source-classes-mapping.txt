@@ -1,0 +1,26 @@
+app/appmeteo/model/FileOperationDaily.java
+ app.appmeteo.model.FileOperationDaily
+app/appmeteo/AppMeteoCLI.java
+ app.appmeteo.AppMeteoCLI
+app/appmeteo/AppMeteo.java
+ app.appmeteo.AppMeteo
+module-info.java
+ module-info
+app/appmeteo/model/APiManagerDaily.java
+ app.appmeteo.model.APiManagerDaily
+app/appmeteo/model/Authors.java
+ app.appmeteo.model.Authors
+app/appmeteo/controller/BaseController.java
+ app.appmeteo.controller.BaseController
+app/appmeteo/model/APIManager.java
+ app.appmeteo.model.APIManager
+app/appmeteo/model/DataManager.java
+ app.appmeteo.model.DataManager
+app/appmeteo/controller/MainWindowController.java
+ app.appmeteo.controller.MainWindowController
+app/appmeteo/view/ViewFactory.java
+ app.appmeteo.view.ViewFactory
+app/appmeteo/model/FileOperation.java
+ app.appmeteo.model.FileOperation
+app/appmeteo/model/DataManagerDaily.java
+ app.appmeteo.model.DataManagerDaily

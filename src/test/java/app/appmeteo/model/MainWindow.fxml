@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="504.0" prefWidth="874.0"
+            xmlns="http://javafx.com/javafx/8.0.171">
+    <children>
+        <MenuBar layoutX="-4.0" prefHeight="29.0" prefWidth="892.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Favoris"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Label fx:id="nomVille" layoutX="27.0" layoutY="41.0" prefHeight="17.0" prefWidth="199.0" text="Ville">
+            <font>
+                <Font size="31.0"/>
+            </font>
+        </Label>
+        <Label fx:id="date" layoutX="28.0" layoutY="87.0" prefHeight="17.0" prefWidth="100.0" text="Date"/>
+        <Label fx:id="heure" layoutX="29.0" layoutY="111.0" prefHeight="17.0" prefWidth="98.0" text="Heure"/>
+        <Label fx:id="temperature" layoutX="417.0" layoutY="77.0" prefHeight="29.0" prefWidth="100.0"
+               text="Temperature"/>
+        <Label fx:id="temperatureMin" layoutX="418.0" layoutY="123.0" text="Min"/>
+        <Label fx:id="temperatureMax" layoutX="476.0" layoutY="123.0" text="Max"/>
+        <Label layoutX="273.0" layoutY="189.0" text="Vent"/>
+        <Label fx:id="valeurVent" layoutX="270.0" layoutY="212.0" prefHeight="9.0" prefWidth="38.0" text="Vvent"/>
+        <Label layoutX="441.0" layoutY="189.0" text="Humidite"/>
+        <Label fx:id="valeurHumidite" layoutX="440.0" layoutY="212.0" text="Vhum"/>
+        <Label layoutX="265.0" layoutY="236.0" text="Lever du soleil"/>
+        <Label fx:id="heureLever" layoutX="270.0" layoutY="271.0" text="Vhl"/>
+        <Label layoutX="440.0" layoutY="236.0" text="Coucher de soleil"/>
+        <Label fx:id="heureCoucher" layoutX="440.0" layoutY="271.0" text="Vhc"/>
+        <ChoiceBox fx:id="listeFavoris" layoutX="720.0" layoutY="91.0" prefWidth="150.0"/>
+        <Label layoutX="720.0" layoutY="42.0" text="Favoris"/>
+        <Button layoutX="795.0" layoutY="37.0" mnemonicParsing="false" onAction="#addToFavorites" prefHeight="23.0"
+                prefWidth="27.0" text="+"/>
+        <Button layoutX="845.0" layoutY="36.0" mnemonicParsing="false" onAction="#deleteFromFavorites" prefHeight="27.0"
+                prefWidth="27.0" text="-"/>
+        <TextField fx:id="chercherVille" layoutX="313.0" layoutY="37.0" prefHeight="27.0" prefWidth="175.0"/>
+        <Button fx:id="chercher" layoutX="511.0" layoutY="36.0" mnemonicParsing="false" onAction="#searchCity"
+                prefHeight="27.0" prefWidth="100.0" text="Chercher"/>
+        <Button layoutX="784.0" layoutY="143.0" mnemonicParsing="false" onAction="#favoriteSelected" text="Appliquer"/>
+        <Label layoutX="222.0" layoutY="88.0" text="Temperature:"/>
+        <Label layoutX="222.0" layoutY="123.0" text="Temperature Min-Max:"/>
+        <ImageView fitHeight="494.0" fitWidth="910.0" focusTraversable="true" layoutX="-13.0" layoutY="16.0"
+                   mouseTransparent="true" opacity="0.29" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@meteo.jpg"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="imagemeteo" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="137.0"
+                   pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@meteo.png"/>
+            </image>
+        </ImageView>
+        <Line endX="214.0" endY="44.5" startX="13.292892456054688" startY="44.5" stroke="WHITE"/>
+        <Line endX="213.5" endY="43.5" startX="213.49998474121094" startY="301.29290771484375" stroke="WHITE"/>
+        <Line endX="212.5" endY="299.5" startX="12.292892456054688" startY="299.5" stroke="WHITE"/>
+        <Line endX="13.5" endY="43.5" startX="11.792892456054688" startY="299.0" stroke="WHITE"/>
+        <Line endX="840.0" endY="343.29290771484375" startX="155.2928924560547" startY="343.29290771484375"
+              stroke="WHITE" strokeMiterLimit="30.0" strokeWidth="3.0"/>
+        <ImageView fx:id="imagedemain" fitHeight="68.0" fitWidth="72.0" layoutX="167.0" layoutY="380.0"
+                   pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@meteo.png"/>
+            </image>
+        </ImageView>
+        <Label fx:id="demain" layoutX="179.0" layoutY="455.0" text="demain"/>
+        <Label fx:id="tempdemain" layoutX="181.0" layoutY="364.0" text="tempdemain"/>
+        <ImageView fx:id="imagevendredi" fitHeight="61.0" fitWidth="66.0" layoutX="305.0" layoutY="382.0"
+                   pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@meteo.png"/>
+            </image>
+        </ImageView>
+
+        <Label fx:id="tempvendredi" layoutX="303.0" layoutY="364.0" text="tempvendredi"/>
+        <Label fx:id="vendredi" layoutX="309.0" layoutY="455.0" text="vendredi"/>
+        <ImageView fx:id="imagesamedi" fitHeight="54.0" fitWidth="66.0" layoutX="432.0" layoutY="383.0"
+                   pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@meteo.png"/>
+            </image>
+        </ImageView>
+        <Label fx:id="tempsamedi" layoutX="430.0" layoutY="364.0" text="tempsamedi"/>
+        <Label fx:id="samedi" layoutX="436.0" layoutY="455.0" text="samedi"/>
+        <ImageView fx:id="imagedim" fitHeight="50.0" fitWidth="66.0" layoutX="553.0" layoutY="383.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@meteo.png"/>
+            </image>
+        </ImageView>
+        <Label fx:id="tempdim" layoutX="553.0" layoutY="364.0" text="tempdim"/>
+        <Label fx:id="dim" layoutX="553.0" layoutY="455.0" text="dim"/>
+        <ImageView fx:id="imagelundi" fitHeight="54.0" fitWidth="66.0" layoutX="646.0" layoutY="380.0"
+                   pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@meteo.png"/>
+            </image>
+        </ImageView>
+        <Label fx:id="templundi" layoutX="646.0" layoutY="364.0" text="templundi"/>
+        <Label fx:id="lundi" layoutX="646.0" layoutY="455.0" text="lundi"/>
+        <ImageView fx:id="imagemardi" fitHeight="54.0" fitWidth="66.0" layoutX="757.0" layoutY="380.0"
+                   pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@meteo.png"/>
+            </image>
+        </ImageView>
+        <Label fx:id="tempmardi" layoutX="757.0" layoutY="364.0" text="tempmardi"/>
+        <Label fx:id="mardi" layoutX="766.0" layoutY="455.0" text="mardi"/>
+    </children>
+</AnchorPane>
